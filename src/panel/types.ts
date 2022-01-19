@@ -38,6 +38,8 @@ export interface GraphDatasourceOptions {
   datasource?: string;
   input_bucket?: string;
   output_bucket?: string;
+  model_name?: string;
+  model_type?: string;
 }
 
 export interface Options {
@@ -74,6 +76,8 @@ export const defaults: Options = {
     datasource: '',
     input_bucket: '',
     output_bucket: 'loudml',
+    model_name: '',
+    model_type: '',
   },
   modelName: '',
 };
