@@ -55,6 +55,24 @@ export class GraphPanelEditor extends PureComponent<PanelEditorProps<Options>> {
     // window.console.log("onBlurOutputBucket", this.state);
   };
 
+  onChangeModelName = (event: any) => {
+    this.props.options.datasourceOptions.model_name = event.target.value;
+    this.setState({ value: event.target.value });
+  };
+
+  onBlurModelName = () => {
+    // window.console.log("onBlurModelName", this.state);
+  };
+
+  onChangeModelType = (event: any) => {
+    this.props.options.datasourceOptions.model_type = event.target.value;
+    this.setState({ value: event.target.value });
+  };
+
+  onBlurModelType = () => {
+    // window.console.log("onBlurModelType", this.state);
+  };
+
   onGraphOptionsChange = (options: Partial<GraphOptions>) => {
     this.props.onOptionsChange({
       ...this.props.options,
@@ -118,7 +136,7 @@ export class GraphPanelEditor extends PureComponent<PanelEditorProps<Options>> {
     const {
       graph: { showBars, showPoints, showLines, isStacked, lineWidth, fill, fillGradient },
       tooltipOptions: { mode },
-      datasourceOptions: { datasource, input_bucket, output_bucket },
+      datasourceOptions: { datasource, input_bucket, output_bucket,model_name, model_type },
     } = this.props.options;
 
     return (
@@ -161,6 +179,35 @@ export class GraphPanelEditor extends PureComponent<PanelEditorProps<Options>> {
             />
           </div>
           <p>Specify a bucket to store ML training results (It should be in Loud ML YAML config)</p>
+          
+          <div className="gf-form max-width-40">
+            <span className="gf-form-label width-10">Model Name</span>
+            <Input
+              value={this.props.options.datasourceOptions.model_name}
+              className="gf-form-input"
+              type="text"
+              placeholder="Model Name"
+              min-length="0"
+              onBlur={this.onBlurModelName}
+              onChange={this.onChangeModelName}
+            />
+          </div>
+          <p>Specify Model Name such as DONUT or GRU)</p>
+          
+          <div className="gf-form max-width-40">
+            <span className="gf-form-label width-10">Model Type</span>
+            <Input
+              value={this.props.options.datasourceOptions.model_type}
+              className="gf-form-input"
+              type="text"
+              placeholder="Model Type"
+              min-length="0"
+              onBlur={this.onBlurModelType}
+              onChange={this.onChangeModelType}
+            />
+          </div>
+          <p>Specify Model Type such as donut or gru)</p>
+          
         </PanelOptionsGroup>
 
         <PanelOptionsGroup title="Draw">
