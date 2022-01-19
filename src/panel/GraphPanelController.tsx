@@ -222,6 +222,8 @@ export class LoudMLTooltip extends React.Component {
     const datasource = this.datasourceOptions.datasource;
     const input_bucket = this.datasourceOptions.input_bucket;
     const output_bucket = this.datasourceOptions.output_bucket;
+    const model_name = this.datasourceOptions.model_name;
+    const model_type = this.datasourceOptions.model_type;
 
     const feature =
       (this.data.request.targets && this.data.request.targets.length > 0 && extract_tooltip_feature(this.data.request.targets[0])) ||
@@ -288,6 +290,16 @@ export class LoudMLTooltip extends React.Component {
           <b>Output bucket:</b>
           <br />
           <code>{output_bucket}</code>
+        </p>
+        <p>
+          <b>Model Name:</b>
+          <br />
+          <code>{model_name}</code>
+        </p>
+          <p>
+          <b>Model Type:</b>
+          <br />
+          <code>{model_type}</code>
         </p>
       </div>
     );
@@ -525,6 +537,9 @@ export class CreateBaselineButton extends React.Component {
     window.console.log('LoudML server:', datasourceOptions.datasource);
     window.console.log('Input bucket:', datasourceOptions.input_bucket);
     window.console.log('Output bucket:', datasourceOptions.output_bucket);
+    window.console.log('Model Name:', datasourceOptions.model_name);
+    window.console.log('Model Type:', datasourceOptions.model_type);
+
 
     this.dsName = datasourceOptions.datasource;
 
