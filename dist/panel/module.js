@@ -7623,8 +7623,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.DEFAULT_LOUDML_RP = 'autogen';
-var model_name = this.props.panelOptions.datasourceOptions.model_name;
-var model_type = this.props.panelOptions.datasourceOptions.model_type;
+var model_name = this.datasourceOptions.model_name;
+var model_type = this.datasourceOptions.model_type;
 exports.MODEL_TYPE_LIST = [{
   name: model_name,
   type: model_type,
@@ -8877,6 +8877,8 @@ var CreateBaselineButton = /*#__PURE__*/function (_react_1$default$Comp3) {
       window.console.log('LoudML server:', datasourceOptions.datasource);
       window.console.log('Input bucket:', datasourceOptions.input_bucket);
       window.console.log('Output bucket:', datasourceOptions.output_bucket);
+      window.console.log('Model Name:', datasourceOptions.model_name);
+      window.console.log('Model Type', datasourceOptions.model_type);
       this.dsName = datasourceOptions.datasource;
 
       if (!this.dsName) {
