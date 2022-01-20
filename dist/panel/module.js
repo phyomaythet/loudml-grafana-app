@@ -7623,9 +7623,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.DEFAULT_LOUDML_RP = 'autogen';
+var model_name = this.props.panelOptions.datasourceOptions.model_name;
+var model_name = this.props.panelOptions.datasourceOptions.model_type;
 exports.MODEL_TYPE_LIST = [{
-  name: 'Donut',
-  type: 'donut',
+  name: model_name,
+  type: model_type,
   "default": true
 }];
 exports.DEFAULT_MODEL = {
@@ -10108,6 +10110,16 @@ exports.plugin = new data_1.PanelPlugin(GraphPanel_1.GraphPanel).useFieldConfig(
     name: 'Output Bucket',
     description: 'Database to store ML Model training results',
     defaultValue: 'loudml'
+  }).addTextInput({
+    path: 'datasourceOptions.model_name',
+    name: 'Model Name',
+    description: 'Model Name',
+    defaultValue: ''
+  }).addTextInput({
+    path: 'datasourceOptions.model_type',
+    name: 'Model Type',
+    description: 'Model Type',
+    defaultValue: ''
   }).addBooleanSwitch({
     path: 'graph.showBars',
     name: 'Bars',
