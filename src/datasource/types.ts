@@ -9,11 +9,11 @@ export interface LoudMLQuery extends DataQuery {}
 
 export const DEFAULT_LOUDML_RP = 'autogen';
 
-//const model_name = this.datasourceOptions.model_name;
-//const model_type = this.datasourceOptions.model_type;
+const model_name = this.datasourceOptions.model_name;
+const model_type = this.datasourceOptions.model_type;
 export const MODEL_TYPE_LIST = [
-  //{ name: model_name, type: model_type, default: true },
-  { name: 'GRU', type: 'gru', default: true },
+  { name: model_name, type: model_type, default: true },
+  //{ name: 'GRU', type: 'gru', default: true },
   //{ name: 'Donut', type: 'donut', default: true },
   // { name: 'DiskUtil', type: 'donut-ns', default: false },
   // { name: 'donut multivariate', type: 'donut-mv', default: false },
