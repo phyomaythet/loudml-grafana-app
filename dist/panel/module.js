@@ -7624,7 +7624,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DEFAULT_LOUDML_RP = 'autogen';
 var model_name = this.props.panelOptions.datasourceOptions.model_name;
-var model_name = this.props.panelOptions.datasourceOptions.model_type;
+var model_type = this.props.panelOptions.datasourceOptions.model_type;
 exports.MODEL_TYPE_LIST = [{
   name: model_name,
   type: model_type,
