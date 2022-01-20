@@ -7623,11 +7623,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.DEFAULT_LOUDML_RP = 'autogen';
-var model_name = this.datasourceOptions.model_name;
-var model_type = this.datasourceOptions.model_type;
 exports.MODEL_TYPE_LIST = [{
-  name: model_name,
-  type: model_type,
+  name: 'GRU',
+  type: 'gru',
   "default": true
 }];
 exports.DEFAULT_MODEL = {
@@ -8604,6 +8602,8 @@ var LoudMLTooltip = /*#__PURE__*/function (_react_1$default$Comp2) {
       var datasource = this.datasourceOptions.datasource;
       var input_bucket = this.datasourceOptions.input_bucket;
       var output_bucket = this.datasourceOptions.output_bucket;
+      var model_name = this.datasourceOptions.model_name;
+      var model_type = this.datasourceOptions.model_type;
       var feature = this.data.request.targets && this.data.request.targets.length > 0 && extractors_1.extract_tooltip_feature(this.data.request.targets[0]) || 'Select one or more fields';
       var interval = this.data.request.targets && this.data.request.targets.length > 0 && extractors_1.extract_group_by(this.data.request.targets[0]) || "Select a 'Group by' value";
       var fill_value = this.data.request.targets && this.data.request.targets.length > 0 && extractors_1.extract_fill_value(this.data.request.targets[0]) || "Select a 'Fill' value"; // TODO: extractor for Tags
