@@ -26,8 +26,8 @@
   },
 
   "includes": [
-    { "type": "panel", "name": "Loud ML Graph Panel" },
-    { "type": "datasource", "name": "Loud ML Datasource" }
+    { "type": "panel", "name": "Loud ML Graph Panel Custom" },
+    { "type": "datasource", "name": "Loud ML Datasource Custom" }
   ],
 
   "dependencies": {
