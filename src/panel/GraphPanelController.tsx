@@ -244,6 +244,7 @@ export class LoudMLTooltip extends React.Component {
     return (
       <div className="small">
         <p>
+          This plugin is demo for Traffic Forecasting using GRU.
           Use your current data selection to baseline normal metric behavior using a machine learning task.
           <br />
           This will create a new model, and run training to fit the baseline to your data.
@@ -296,7 +297,7 @@ export class LoudMLTooltip extends React.Component {
           <br />
           <code>{model_name}</code>
         </p>
-          <p>
+        <p>
           <b>Model Type:</b>
           <br />
           <code>{model_type}</code>
