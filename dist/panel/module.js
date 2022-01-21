@@ -7624,8 +7624,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.DEFAULT_LOUDML_RP = 'autogen';
 exports.MODEL_TYPE_LIST = [{
-  name: model_name,
-  type: model_type,
+  name: 'GRU',
+  type: 'gru',
   "default": true
 }];
 exports.DEFAULT_MODEL = {
