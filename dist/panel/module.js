@@ -10116,17 +10116,17 @@ exports.plugin = new data_1.PanelPlugin(GraphPanel_1.GraphPanel).useFieldConfig(
     name: 'Output Bucket',
     description: 'Database to store ML Model training results',
     defaultValue: 'loudml'
-  }).addTextInput({
-    path: 'datasourceOptions.model_name',
-    name: 'Model Name',
-    description: 'Model Name',
-    defaultValue: ''
-  }).addTextInput({
-    path: 'datasourceOptions.model_type',
-    name: 'Model Type',
-    description: 'Model Type',
-    defaultValue: ''
-  }).addBooleanSwitch({
+  })//.addTextInput({
+    //path: 'datasourceOptions.model_name',
+    //name: 'Model Name',
+    //description: 'Model Name',
+    //defaultValue: ''
+  //}).addTextInput({
+  //  path: 'datasourceOptions.model_type',
+  ////  name: 'Model Type',
+  //  description: 'Model Type',
+ //   defaultValue: ''
+   .addBooleanSwitch({
     path: 'graph.showBars',
     name: 'Bars',
     description: '',
