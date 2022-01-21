@@ -7623,22 +7623,22 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.DEFAULT_LOUDML_RP = 'autogen';
-exports.MODEL_TYPE_LIST = [{
-  name: 'GRU',
-  type: 'gru',
-  "default": true
-}];
-exports.DEFAULT_MODEL = {
-  bucket_interval: '20m',
-  default_bucket: null,
-  features: [],
-  interval: '1m',
-  max_evals: 20,
-  name: '',
-  offset: '10s',
-  span: 10,
-  type: exports.MODEL_TYPE_LIST[0].type
-};
+//exports.MODEL_TYPE_LIST = [{
+//  name: 'GRU',
+//  type: 'gru',
+//  "default": true
+//}];
+//exports.DEFAULT_MODEL = {
+//  bucket_interval: '20m',
+//  default_bucket: null,
+//  features: [],
+//  interval: '1m',
+//  max_evals: 20,
+//  name: '',
+//  offset: '10s',
+//  span: 10,
+//  type: exports.MODEL_TYPE_LIST[0].type
+//};
 exports.DEFAULT_JOB = {
   name: '',
   method: 'get',
@@ -8767,9 +8767,12 @@ var CreateBaselineButton = /*#__PURE__*/function (_react_1$default$Comp3) {
         // Let parse a "5m" time from it
 
         var time = extractors_1.extract_model_time(source);
-        
-	//var model = Object.assign(Object.assign({}, types_1.DEFAULT_MODEL), {
-	var model = {
+	exports.MODEL_TYPE_LIST = [{
+	  name: model_name,
+	  type: model_type,
+	  "default": true
+	}];
+	exports.DEFAULT_MODEL = {
 	  bucket_interval: '20m',
 	  default_bucket: null,
 	  features: [],
@@ -8778,8 +8781,10 @@ var CreateBaselineButton = /*#__PURE__*/function (_react_1$default$Comp3) {
 	  name: '',
 	  offset: '10s',
 	  span: 10,
-	  type: model_type
-	},{
+	  type: exports.MODEL_TYPE_LIST[0].type
+	};
+        
+	var model = Object.assign(Object.assign({}, types_1.DEFAULT_MODEL), {
           max_evals: 10,
           name: name,
           interval: _this5.normalizeInterval(time),
