@@ -8758,8 +8758,8 @@ var CreateBaselineButton = /*#__PURE__*/function (_react_1$default$Comp3) {
 
         var bucket = _this5.props.panelOptions.datasourceOptions.input_bucket;
         var output_bucket = _this5.props.panelOptions.datasourceOptions.output_bucket;
-	var model_name = this.datasourceOptions.model_name;
-        var model_type = this.datasourceOptions.model_type;
+	var model_name = this.props.datasourceOptions.model_name;
+        var model_type = this.props.datasourceOptions.model_type;
         var measurement = extractors_1.extract_model_measurement(source);
         var fill = extractors_1.extract_model_fill(source);
         var match_all = extractors_1.extract_model_tags_map(source);
