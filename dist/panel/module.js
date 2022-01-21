@@ -8767,7 +8767,19 @@ var CreateBaselineButton = /*#__PURE__*/function (_react_1$default$Comp3) {
         // Let parse a "5m" time from it
 
         var time = extractors_1.extract_model_time(source);
-        var model = Object.assign(Object.assign({}, types_1.DEFAULT_MODEL), {
+     
+	//var model = Object.assign(Object.assign({}, types_1.DEFAULT_MODEL), {
+        var model = Object.assign(Object.assign({}, {
+	  bucket_interval: '20m',
+	  default_bucket: null,
+	  features: [],
+	  interval: '1m',
+	  max_evals: 20,
+	  name: '',
+	  offset: '10s',
+	  span: 10,
+	  type: model_type
+	}), {
           max_evals: 10,
           name: name,
           interval: _this5.normalizeInterval(time),
@@ -8786,6 +8798,8 @@ var CreateBaselineButton = /*#__PURE__*/function (_react_1$default$Comp3) {
             };
           })
         });
+	      
+	      
         window.console.log('ML Model', model);
         _this5.props.panelOptions.modelName = name;
 
